@@ -14,7 +14,7 @@ class ofxDebugDrawUtils{
 public:
 
 	static void drawArrow(ofMesh & m, const glm::vec2 & src, const glm::vec2 & dst,
-						  float headSize, bool colorize = false, const ofColor & c = ofColor::black);
+						  float headSize, float headAngle = 30, bool colorize = false, const ofColor & c = ofColor::black);
 
 };
 
