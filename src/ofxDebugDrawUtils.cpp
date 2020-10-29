@@ -30,9 +30,12 @@ void ofxDebugDrawUtils::drawArrow(ofMesh & m, const glm::vec2 & src, const glm::
 	m.addVertex(dst3 + right * headSize * headScale); 	// 2
 	m.addVertex(dst3 + left * headSize * headScale); 	// 3
 
-	vector<ofIndexType> indices = {	firstIndex + 0, firstIndex + 1, //main line
-									firstIndex + 1, firstIndex + 2, //left arrow line
-									firstIndex + 1, firstIndex + 3
+	vector<ofIndexType> indices = {	ofIndexType(firstIndex + 0), 
+									ofIndexType(firstIndex + 1), //main line
+									ofIndexType(firstIndex + 1), 
+									ofIndexType(firstIndex + 2), //left arrow line
+									ofIndexType(firstIndex + 1), 
+									ofIndexType(firstIndex + 3)
 									};
 	m.addIndices( indices );
 	if(colorize){
